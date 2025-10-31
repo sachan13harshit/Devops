@@ -1,0 +1,82 @@
+
+DevOps & CI/CD Notes
+
+Package Managers
+
+mvn - used for Java (Maven)
+
+npm - used for Node.js
+
+pip - used for Python
+
+Build & Testing
+
+Build compiles the code but does not run unit tests.
+
+Running "mvn package" or "mvn install" compiles the code and runs unit tests.
+
+Continuous Integration (CI)
+
+CI is triggered when a pull request (PR) is merged, when a branch is merged, or when code is pushed to the repository.
+
+Typical CI pipeline steps:
+1. Code checkout
+2. Linting
+3. Secrets scan
+4. Build
+5. Unit testing
+6. Software Composition Analysis (SCA)
+7. Static Application Security Testing (SAST)
+8. Dockerization
+9. Image scan
+10. Sign artifact
+11. Push artifact to repository
+12. Trigger Continuous Deployment (CD)
+
+Continuous Delivery (CD)
+
+Typical CD pipeline steps:
+1. Deploy to staging or test environment
+2. Dynamic Application Security Testing (DAST)
+3. Integration tests
+4. Infrastructure as Code (IaC) scan
+5. Secrets check
+6. Approval for production
+7. Production deployment
+8. Runtime security checks
+9. Monitoring and feedback
+
+Testing Types
+
+SIT stands for System Integration Testing.
+Types of unit testing include functional testing, regression testing, mock testing, and boundary testing.
+Types of artifacts include JARs, WARs, Docker images, and binaries.
+
+Code Coverage
+
+Definition: Code coverage measures how much of your source code is executed during automated tests (unit, integration, etc.).
+Types of code coverage include line coverage, branch coverage, function coverage, and statement coverage.
+
+Continuous Delivery vs Continuous Deployment
+
+Continuous Delivery:
+A typical flow is SIT, then performance testing, then DAST, then manual approval, and optional production deployment. This may also include NLP testing and alpha/beta testing.
+
+Continuous Deployment:
+A typical flow is SIT, then performance testing, then DAST, and then automatic production deployment with no manual approval.
+
+Linux
+
+Kernel: The kernel acts as an adapter between hardware (keyboard, CPU, monitor, printer, hard disk, etc.) and software.
+The kernel manages the CPU, memory, and I/O devices.
+
+AWS Console Basics - Creating an EC2 Instance
+
+Size determines the instance's CPU, RAM, and type.
+Key Pair is used for SSH access.
+VPC (Virtual Private Cloud) defines the network boundary.
+Subnet is a smaller network inside a VPC.
+IP Addresses:
+- Private IP is used for internal AWS communication and is not accessible from the internet.
+- Public IP is internet-accessible, assigned automatically, and changes when the instance is stopped or restarted.
+- Elastic IP is a static public IP that can be attached or detached from any instance.
